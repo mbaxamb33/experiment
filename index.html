@@ -1,23 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pantopia</title>
+    <script>
+      // Check for saved theme preference or use the system preference
+      try {
+        const savedTheme = localStorage.getItem('pantopia-theme');
+        console.log('Initial theme from localStorage:', savedTheme);
+        
+        if (savedTheme) {
+          document.documentElement.className = savedTheme;
+        } else {
+          // Use system preference as fallback
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.className = prefersDark ? 'dark' : 'light';
+          console.log('Using system preference:', prefersDark ? 'dark' : 'light');
+        }
+      } catch (error) {
+        console.error('Error setting initial theme:', error);
+        // Default to dark if there's an error
+        document.documentElement.className = 'dark';
+      }
+    </script>
     <style>
-      html, body, #root {
-        background-color: #000000 !important;
-        color: #ffffff;
-        height: 100%;
-        width: 100%;
+      /* Base styles to prevent flash of unstyled content */
+      body, #root {
         margin: 0;
         padding: 0;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      
+      .dark {
+        background-color: #000000;
+        color: #ffffff;
+      }
+      
+      .light {
+        background-color: #ffffff;
+        color: #000000;
       }
     </style>
   </head>
-  <body style="background-color: #000000;">
-    <div id="root" style="background-color: #000000;"></div>
+  <body>
+    <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

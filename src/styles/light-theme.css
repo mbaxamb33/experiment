@@ -1,0 +1,85 @@
+/* Light theme styles */
+.light {
+    color-scheme: light;
+  }
+  
+  .light body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  
+  .light #root {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  
+  .light main {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  
+  .light [data-sidebar="sidebar"] {
+    background-color: #f5f5f5 !important;
+  }
+  
+  /* Remove the !important from black-theme.css when in light mode */
+  .light div, .light * {
+    background-color: initial;
+  }
+  
+  /* Text colors for light mode */
+  .light h1, .light h2, .light h3, .light h4, .light h5, .light h6, .light p, .light span, .light a {
+    color: #000000 !important;
+  }
+  
+  /* Sidebar colors for light mode */
+  .light [data-sidebar="menu-button"] {
+    color: #333333 !important;
+    background-color: transparent !important;
+  }
+  
+  .light [data-sidebar="group-label"] {
+    color: #666666 !important;
+  }
+  
+  /* Ensure the sidebar components have proper styling */
+  .light [data-slot="sidebar"]:not([data-variant=inset]) {
+    background-color: #f5f5f5 !important;
+  }
+  
+  .light [data-slot="sidebar-inner"] {
+    background-color: #f5f5f5 !important;
+  }
+  
+  /* Override CSS variables for light theme */
+  .light {
+    --background: 0 0% 100% !important;
+    --foreground: 240 10% 3.9% !important;
+    --card: 0 0% 100% !important;
+    --card-foreground: 240 10% 3.9% !important;
+    --popover: 0 0% 100% !important;
+    --popover-foreground: 240 10% 3.9% !important;
+    --primary: 240 5.9% 10% !important;
+    --primary-foreground: 0 0% 98% !important;
+    --secondary: 240 4.8% 95.9% !important;
+    --secondary-foreground: 240 5.9% 10% !important;
+    --muted: 240 4.8% 95.9% !important;
+    --muted-foreground: 240 3.8% 46.1% !important;
+    --accent: 240 4.8% 95.9% !important;
+    --accent-foreground: 240 5.9% 10% !important;
+    --destructive: 0 84.2% 60.2% !important;
+    --destructive-foreground: 0 0% 98% !important;
+    --border: 240 5.9% 90% !important;
+    --input: 240 5.9% 90% !important;
+    --ring: 240 5.9% 10% !important;
+    
+    /* Sidebar colors */
+    --sidebar: 0 0% 97% !important;
+    --sidebar-foreground: 240 10% 3.9% !important;
+    --sidebar-primary: 221 83% 53% !important;
+    --sidebar-primary-foreground: 0 0% 100% !important;
+    --sidebar-accent: 210 40% 96.1% !important;
+    --sidebar-accent-foreground: 240 5.9% 10% !important;
+    --sidebar-border: 240 5.9% 90% !important;
+    --sidebar-ring: 240 5.9% 10% !important;
+  }

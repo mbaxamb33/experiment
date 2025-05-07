@@ -15,6 +15,7 @@ import {
 import { NavMain } from "@/components/nav-main"
 import { NavProjects } from "@/components/nav-projects"
 import { NavUser } from "@/components/nav-user"
+import { CustomThemeSwitch } from "@/components/custom-theme-switch"
 import { PantopiaLogo } from "@/components/pantopia-logo"
 import {
   Sidebar,
@@ -22,6 +23,7 @@ import {
   SidebarFooter,
   SidebarHeader,
   SidebarRail,
+  SidebarSeparator,
 } from "@/components/ui/sidebar"
 
 // This is sample data.
@@ -165,6 +167,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavProjects projects={data.projects} />
       </SidebarContent>
       <SidebarFooter>
+        <div className="px-2 mb-2">
+          <CustomThemeSwitch />
+        </div>
+        <SidebarSeparator className="mb-2" />
         <NavUser user={data.user} />
       </SidebarFooter>
       <SidebarRail />
