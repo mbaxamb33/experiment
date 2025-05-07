@@ -1,0 +1,33 @@
+/* Dark mode custom styles */
+.dark .pantopia-logo {
+    color: white;
+  }
+  
+  .dark {
+    background-color: black;
+    color: white;
+  }
+  
+  .dark [data-sidebar="sidebar"] {
+    background-color: black;
+    color: white;
+  }
+  
+  .dark [data-sidebar="menu-button"] {
+    color: white;
+  }
+  
+  .dark [data-sidebar="group-label"] {
+    color: hsl(240 5% 64.9%);
+  }
+  
+  .dark main {
+    background-color: black;
+    color: white;
+  }
+  
+  /* Override any other background colors that might be interfering */
+  .dark * {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+  }

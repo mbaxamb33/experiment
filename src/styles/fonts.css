@@ -1,0 +1,14 @@
+/* Font styles for Pantopia logo */
+@font-face {
+    font-family: 'itc-avant-garde-gothic-pro';
+    src: url('https://use.typekit.net/af/7d39ee/00000000000000007735ba3a/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3') format('woff2'),
+         url('https://use.typekit.net/af/7d39ee/00000000000000007735ba3a/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Fallback font stack */
+  .pantopia-logo {
+    font-family: 'itc-avant-garde-gothic-pro', 'Avenir Next', 'Helvetica Neue', sans-serif;
+  }

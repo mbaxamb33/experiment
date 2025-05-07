@@ -1,0 +1,56 @@
+/* Force black backgrounds throughout the application */
+.dark {
+    color-scheme: dark;
+  }
+  
+  .dark body {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+  }
+  
+  .dark #root {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+  }
+  
+  .dark div {
+    background-color: #000000 !important;
+  }
+  
+  .dark main {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+  }
+  
+  .dark [data-sidebar="sidebar"] {
+    background-color: #000000 !important;
+  }
+  
+  /* Force black theme for all elements */
+  .dark * {
+    --background: 0 0% 0% !important;
+    --foreground: 0 0% 100% !important;
+    --card: 0 0% 0% !important;
+    --card-foreground: 0 0% 100% !important;
+    --popover: 0 0% 0% !important;
+    --popover-foreground: 0 0% 100% !important;
+    
+    /* Make all backgrounds black regardless of what the component tries to use */
+    background-color: #000000 !important;
+  }
+  
+  /* Exception for text elements to maintain readability */
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6, .dark p, .dark span, .dark a {
+    color: #ffffff !important;
+    background-color: transparent !important;
+  }
+  
+  /* Exception for icons */
+  .dark svg {
+    background-color: transparent !important;
+  }
+  
+  /* Default background to black for all elements */
+  * {
+    background-color: #000000;
+  }

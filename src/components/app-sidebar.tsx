@@ -15,7 +15,7 @@ import {
 import { NavMain } from "@/components/nav-main"
 import { NavProjects } from "@/components/nav-projects"
 import { NavUser } from "@/components/nav-user"
-import { TeamSwitcher } from "@/components/team-switcher"
+import { PantopiaLogo } from "@/components/pantopia-logo"
 import {
   Sidebar,
   SidebarContent,
@@ -158,7 +158,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
-        <TeamSwitcher teams={data.teams} />
+        <PantopiaLogo />
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
